@@ -1,14 +1,14 @@
-# Multicloud::Adapter::Core
+# Multicloud::Core
 
 This is a gem you should use when write a MultiCloud adapter.
-It includes: error classes, base adapter (interface), and other needed things for writing an adapter.
+It includes: error classes, base adapter (interface), entities, and other needed things for writing an adapter.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'multicloud-adapter-core'
+gem 'multicloud-core'
 ```
 
 And then execute:
@@ -17,14 +17,14 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install multicloud-adapter-core
+    $ gem install multicloud-core
 
 ## Usage
 
 Implements your adapter class in your gem:
 
 ```ruby
-class YourAdapter < Multicloud::Adapter::Core::BaseAdapter
+class YourAdapter < Multicloud::Core::BaseAdapter
     # @todo Implements all methods
 end
 ```
@@ -58,4 +58,4 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/glukhikh/multicloud-adapter-core.
+Bug reports and pull requests are welcome on GitHub at https://github.com/glukhikh/multicloud-core.

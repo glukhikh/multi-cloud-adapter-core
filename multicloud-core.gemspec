@@ -1,23 +1,23 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "multicloud/adapter/core/version"
+require "multicloud/core/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "multicloud-adapter-core"
-  spec.version       = Multicloud::Adapter::Core::VERSION
+  spec.name          = "multicloud-core"
+  spec.version       = Multicloud::Core::VERSION
   spec.authors       = ["Glukhikh Vladimir"]
   spec.email         = ["gluxix1993@gmail.com"]
 
-  spec.summary       = %q{The core for creating MultiCloud adapters.}
+  spec.summary       = %q{The MultiCloud core gem.}
   spec.description   = %q{This is a gem you should use when write a MultiCloud adapter.}
-  spec.homepage      = "https://github.com/glukhikh/multicloud-adapter-core"
+  spec.homepage      = "https://github.com/glukhikh/multicloud-core"
 
   # Prevent pushing this gem to RubyGems.org.
   if spec.respond_to?(:metadata)
     spec.metadata["homepage_uri"] = spec.homepage
-    spec.metadata["source_code_uri"] = "https://github.com/glukhikh/multicloud-adapter-core"
-    spec.metadata["changelog_uri"] = "https://github.com/glukhikh/multicloud-adapter-core/blob/master/CHANGELOG.md"
+    spec.metadata["source_code_uri"] = "https://github.com/glukhikh/multicloud-core"
+    spec.metadata["changelog_uri"] = "https://github.com/glukhikh/multicloud-core/blob/master/CHANGELOG.md"
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
       "public gem pushes."
