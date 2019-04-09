@@ -52,9 +52,11 @@ module Multicloud
       end
 
       # Removes the directory.
+      # @raise [Multicloud::Core::Errors::ResourceNotFound]
       # @param [String] path - The path to the directory.
+      # @param [Boolean] permanently - The flag of permanently removed.
       # @return [void]
-      def remove_dir(path)
+      def remove_dir(path, permanently = false)
         raise NotImplementedError
       end
 
@@ -99,9 +101,11 @@ module Multicloud
       end
 
       # Removes the file.
+      # @raise [Multicloud::Core::Errors::ResourceNotFound]
       # @param [String] path - The path to the file.
+      # @param [Boolean] permanently - The flag of permanently removed.
       # @return [void]
-      def remove_file(path)
+      def remove_file(path, permanently = false)
         raise NotImplementedError
       end
 
