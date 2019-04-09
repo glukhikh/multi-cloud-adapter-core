@@ -69,8 +69,9 @@ module Multicloud
       # @raise [Multicloud::Core::Errors::AccessDenied]
       # @param [String] from_path - The path to an original directory.
       # @param [String] to_path - The path to a new directory.
+      # @param [Boolean] overwrite - The flag of ovewriting of resource.
       # @return [void]
-      def copy_dir(from_path, to_path)
+      def copy_dir(from_path, to_path, overwrite = false)
         raise NotImplementedError
       end
 
@@ -78,8 +79,9 @@ module Multicloud
       # @raise [Multicloud::Core::Errors::AccessDenied]
       # @param [String] from_path - The path to an original directory.
       # @param [String] to_path - The path to a new directory.
+      # @param [Boolean] overwrite - The flag of ovewriting of resource.
       # @return [void]
-      def move_dir(from_path, to_path)
+      def move_dir(from_path, to_path, overwrite = false)
         raise NotImplementedError
       end
 
@@ -124,8 +126,9 @@ module Multicloud
       # @raise [Multicloud::Core::Errors::AccessDenied]
       # @param [String] from_path - The path to an original file.
       # @param [String] to_path - The path to a new file.
+      # @param [Boolean] overwrite - The flag of ovewriting of resource.
       # @return [void]
-      def copy_file(from_path, to_path)
+      def copy_file(from_path, to_path, overwrite = false)
         raise NotImplementedError
       end
 
@@ -133,8 +136,9 @@ module Multicloud
       # @raise [Multicloud::Core::Errors::AccessDenied]
       # @param [String] from_path - The path to an original file.
       # @param [String] to_path - The path to a new file.
+      # @param [Boolean] overwrite - The flag of ovewriting of resource.
       # @return [void]
-      def move_file(from_path, to_path)
+      def move_file(from_path, to_path, overwrite = false)
         raise NotImplementedError
       end
 

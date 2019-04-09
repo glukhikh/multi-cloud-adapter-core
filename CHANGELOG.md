@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.4] - 2019-04-09
+### Added
+- The flag of overwriting of resource (file/dir)
+
 ## [0.1.3] - 2019-04-09
 ### Added
 - AccessDenied error
