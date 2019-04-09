@@ -24,12 +24,14 @@ module Multicloud
       # Common account methods
 
       # Returns the disk info.
+      # @raise [Multicloud::Core::Errors::AccessDenied]
       # @return [DiskInfo] The disk info.
       def disk_info
         raise NotImplementedError
       end
 
       # Returns the max file size limitation.
+      # @raise [Multicloud::Core::Errors::AccessDenied]
       # @return [Integer] The max file size in bytes.
       def max_file_size
         raise NotImplementedError
@@ -38,6 +40,7 @@ module Multicloud
       # Directory methods
 
       # Returns directory items.
+      # @raise [Multicloud::Core::Errors::AccessDenied]
       # @param [String] path - The path to the directory.
       # @return [ResourceList] The array of dir items.
       def dir_items(path)
@@ -45,6 +48,7 @@ module Multicloud
       end
 
       # Creates a new directory.
+      # @raise [Multicloud::Core::Errors::AccessDenied]
       # @param [String] path - The path to the directory.
       # @return [void]
       def create_dir(path)
@@ -52,6 +56,7 @@ module Multicloud
       end
 
       # Removes the directory.
+      # @raise [Multicloud::Core::Errors::AccessDenied]
       # @raise [Multicloud::Core::Errors::ResourceNotFound]
       # @param [String] path - The path to the directory.
       # @param [Boolean] permanently - The flag of permanently removed.
@@ -61,6 +66,7 @@ module Multicloud
       end
 
       # Copies the directory.
+      # @raise [Multicloud::Core::Errors::AccessDenied]
       # @param [String] from_path - The path to an original directory.
       # @param [String] to_path - The path to a new directory.
       # @return [void]
@@ -69,6 +75,7 @@ module Multicloud
       end
 
       # Moves the directory.
+      # @raise [Multicloud::Core::Errors::AccessDenied]
       # @param [String] from_path - The path to an original directory.
       # @param [String] to_path - The path to a new directory.
       # @return [void]
@@ -77,6 +84,7 @@ module Multicloud
       end
 
       # Renames the directory.
+      # @raise [Multicloud::Core::Errors::AccessDenied]
       # @param [String] path - The path to the directory.
       # @param [String] new_name - The new directory name.
       # @return [void]
@@ -87,6 +95,7 @@ module Multicloud
       # File methods
 
       # Returns the uploading request (url, credentionals, etc).
+      # @raise [Multicloud::Core::Errors::AccessDenied]
       # @param [String] path - The path to the directory.
       # @return [UploadingRequest] The uploading request.
       def upload_file(path)
@@ -94,6 +103,7 @@ module Multicloud
       end
 
       # Returns the downloading request (url, credentionals, etc).
+      # @raise [Multicloud::Core::Errors::AccessDenied]
       # @param [String] path - The path to the directory.
       # @return [DownloadingRequest] The downloading request.
       def download_file(path)
@@ -101,6 +111,7 @@ module Multicloud
       end
 
       # Removes the file.
+      # @raise [Multicloud::Core::Errors::AccessDenied]
       # @raise [Multicloud::Core::Errors::ResourceNotFound]
       # @param [String] path - The path to the file.
       # @param [Boolean] permanently - The flag of permanently removed.
@@ -110,6 +121,7 @@ module Multicloud
       end
 
       # Copies the file.
+      # @raise [Multicloud::Core::Errors::AccessDenied]
       # @param [String] from_path - The path to an original file.
       # @param [String] to_path - The path to a new file.
       # @return [void]
@@ -118,6 +130,7 @@ module Multicloud
       end
 
       # Moves the file.
+      # @raise [Multicloud::Core::Errors::AccessDenied]
       # @param [String] from_path - The path to an original file.
       # @param [String] to_path - The path to a new file.
       # @return [void]
@@ -126,6 +139,7 @@ module Multicloud
       end
 
       # Renames the file.
+      # @raise [Multicloud::Core::Errors::AccessDenied]
       # @param [String] path - The path to the file.
       # @param [String] new_name - The new file name.
       # @return [void]

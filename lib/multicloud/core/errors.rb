@@ -20,6 +20,13 @@ module Multicloud
           @resource_name = resource_name
         end
       end
+
+      # Access denied error
+      class AccessDenied < Error
+        def initialize
+          super('Access denied.')
+        end
+      end
     end
   end
 end
