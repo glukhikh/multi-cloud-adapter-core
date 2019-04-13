@@ -14,7 +14,7 @@ module Multicloud
           @block = block
           block_binding = block.binding
           @action = caller_locations(0)[2]&.label
-          @params = block_binding.method(@action).parameters.map do |p|
+          @params = block_binding.eval("method(\"#{@action}\")").parameters.map do |p|
             p_name = p[1].to_s
             { p_name => eval(p_name, block_binding) }
           end
