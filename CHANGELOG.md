@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.1] - 2019-04-13
+### Fixed
+- operation.rb:66: syntax error, unexpected end-of-input, expecting keyword_end
+
+## 0.2.0 - 2019-04-13 [YANDED]
+
 ## [0.2.0] - 2019-04-13
 ### Added
 - The Operation

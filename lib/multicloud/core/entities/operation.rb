@@ -35,6 +35,7 @@ module Multicloud
             OperationResult.new(operation: self, success: false, result: nil, error: e)
           ensure
             done = true
+          end
         end
 
         # Runs (repeat) the operation.
