@@ -12,10 +12,11 @@ module Multicloud
         def initialize(&block)
           @done = false
           @block = block
+          block_binding = block.binding
           @action = caller_locations(0)[2]&.label
-          @params = method(@action).parameters.map do |p|
+          @params = block_binding.method(@action).parameters.map do |p|
             p_name = p[1].to_s
-            { p_name => eval(p_name, block.binding) }
+            { p_name => eval(p_name, block_binding) }
           end
         end
 
