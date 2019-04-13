@@ -24,7 +24,14 @@ module Multicloud
       # Access denied error
       class AccessDenied < Error
         def initialize
-          super('Access denied.')
+          super('Access denied')
+        end
+      end
+
+      # Operation already completed
+      class OperationAlreadyCompleted < Error
+        def initialize
+          super('Operation already completed')
         end
       end
     end

@@ -6,6 +6,8 @@ require "multicloud/core/entities/resource_list"
 require "multicloud/core/entities/file"
 require "multicloud/core/entities/directory"
 require "multicloud/core/entities/request"
+require "multicloud/core/entities/operation"
+require "multicloud/core/entities/operation_result"
 # Errors
 require "multicloud/core/errors"
 # Base adapter

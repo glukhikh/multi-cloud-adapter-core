@@ -25,14 +25,14 @@ module Multicloud
 
       # Returns the disk info.
       # @raise [Multicloud::Core::Errors::AccessDenied]
-      # @return [DiskInfo] The disk info.
+      # @return [OperationResult<DiskInfo>] The disk info.
       def disk_info
         raise NotImplementedError
       end
 
       # Returns the max file size limitation.
       # @raise [Multicloud::Core::Errors::AccessDenied]
-      # @return [Integer] The max file size in bytes.
+      # @return [OperationResult<Integer>] The max file size in bytes.
       def max_file_size
         raise NotImplementedError
       end
@@ -42,7 +42,7 @@ module Multicloud
       # Returns directory items.
       # @raise [Multicloud::Core::Errors::AccessDenied]
       # @param [String] path - The path to the directory.
-      # @return [ResourceList] The array of dir items.
+      # @return [OperationResult<ResourceList>] The array of dir items.
       def dir_items(path)
         raise NotImplementedError
       end
@@ -50,7 +50,7 @@ module Multicloud
       # Creates a new directory.
       # @raise [Multicloud::Core::Errors::AccessDenied]
       # @param [String] path - The path to the directory.
-      # @return [void]
+      # @return [OperationResult]
       def create_dir(path)
         raise NotImplementedError
       end
@@ -60,7 +60,7 @@ module Multicloud
       # @raise [Multicloud::Core::Errors::ResourceNotFound]
       # @param [String] path - The path to the directory.
       # @param [Boolean] permanently - The flag of permanently removed.
-      # @return [void]
+      # @return [OperationResult]
       def remove_dir(path, permanently = false)
         raise NotImplementedError
       end
@@ -70,7 +70,7 @@ module Multicloud
       # @param [String] from_path - The path to an original directory.
       # @param [String] to_path - The path to a new directory.
       # @param [Boolean] overwrite - The flag of ovewriting of resource.
-      # @return [void]
+      # @return [OperationResult]
       def copy_dir(from_path, to_path, overwrite = false)
         raise NotImplementedError
       end
@@ -80,7 +80,7 @@ module Multicloud
       # @param [String] from_path - The path to an original directory.
       # @param [String] to_path - The path to a new directory.
       # @param [Boolean] overwrite - The flag of ovewriting of resource.
-      # @return [void]
+      # @return [OperationResult]
       def move_dir(from_path, to_path, overwrite = false)
         raise NotImplementedError
       end
@@ -89,7 +89,7 @@ module Multicloud
       # @raise [Multicloud::Core::Errors::AccessDenied]
       # @param [String] path - The path to the directory.
       # @param [String] new_name - The new directory name.
-      # @return [void]
+      # @return [OperationResult]
       def rename_dir(path, new_name)
         raise NotImplementedError
       end
@@ -99,7 +99,7 @@ module Multicloud
       # Returns the uploading request (url, credentionals, etc).
       # @raise [Multicloud::Core::Errors::AccessDenied]
       # @param [String] path - The path to the directory.
-      # @return [UploadingRequest] The uploading request.
+      # @return [OperationResult<UploadingRequest>] The uploading request.
       def upload_file(path)
         raise NotImplementedError
       end
@@ -107,7 +107,7 @@ module Multicloud
       # Returns the downloading request (url, credentionals, etc).
       # @raise [Multicloud::Core::Errors::AccessDenied]
       # @param [String] path - The path to the directory.
-      # @return [DownloadingRequest] The downloading request.
+      # @return [OperationResult<DownloadingRequest>] The downloading request.
       def download_file(path)
         raise NotImplementedError
       end
@@ -117,7 +117,7 @@ module Multicloud
       # @raise [Multicloud::Core::Errors::ResourceNotFound]
       # @param [String] path - The path to the file.
       # @param [Boolean] permanently - The flag of permanently removed.
-      # @return [void]
+      # @return [OperationResult]
       def remove_file(path, permanently = false)
         raise NotImplementedError
       end
@@ -127,7 +127,7 @@ module Multicloud
       # @param [String] from_path - The path to an original file.
       # @param [String] to_path - The path to a new file.
       # @param [Boolean] overwrite - The flag of ovewriting of resource.
-      # @return [void]
+      # @return [OperationResult]
       def copy_file(from_path, to_path, overwrite = false)
         raise NotImplementedError
       end
@@ -137,7 +137,7 @@ module Multicloud
       # @param [String] from_path - The path to an original file.
       # @param [String] to_path - The path to a new file.
       # @param [Boolean] overwrite - The flag of ovewriting of resource.
-      # @return [void]
+      # @return [OperationResult]
       def move_file(from_path, to_path, overwrite = false)
         raise NotImplementedError
       end
@@ -146,7 +146,7 @@ module Multicloud
       # @raise [Multicloud::Core::Errors::AccessDenied]
       # @param [String] path - The path to the file.
       # @param [String] new_name - The new file name.
-      # @return [void]
+      # @return [OperationResult]
       def rename_file(path, new_name)
         raise NotImplementedError
       end

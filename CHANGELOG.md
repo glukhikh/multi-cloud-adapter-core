@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2019-04-13
+### Added
+- The Operation
+- The OperationResult
+- The OperationAlreadyCompleted error
+### Changed
+- All adapter methods returns OperationResult wrapper
+
 ## [0.1.4] - 2019-04-09
 ### Added
 - The flag of overwriting of resource (file/dir)
