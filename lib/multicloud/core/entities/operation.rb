@@ -30,12 +30,12 @@ module Multicloud
           end
 
           begin
-            result = block.call
-            OperationResult.new(operation: self, esult: result)
+            result = @block.call
+            OperationResult.new(operation: self, result: result)
           rescue StandardError => e
             OperationResult.new(operation: self, success: false, result: nil, error: e)
           ensure
-            done = true
+            @done = true
           end
         end
 
@@ -43,18 +43,18 @@ module Multicloud
         # This method same as #run, but does not raise an error.
         # @return [OperationResult] The operation result.
         def repeat!
-          result = block.call
+          result = @block.call
           OperationResult.new(operation: self, result: result)
         rescue StandardError => e
           OperationResult.new(operation: self, success: false, result: nil, error: e)
         ensure
-          done = true
+          @done = true
         end
 
         # Checks the operation already completed.
         # @return [Boolean]
         def done?
-          done
+          @done
         end
 
         # Returns operation info.
