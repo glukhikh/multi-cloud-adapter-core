@@ -37,6 +37,16 @@ module Multicloud
         raise NotImplementedError
       end
 
+      # Async operation
+
+      # Returns the async operation result.
+      # @raise [Multicloud::Core::Errors::AccessDenied]
+      # @param [String] url - The url of status checking.
+      # @return [OperationResult<AsyncStatus>] The async operation status.
+      def async_status(url)
+        raise NotImplementedError
+      end
+
       # Directory methods
 
       # Returns directory items.

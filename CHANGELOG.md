@@ -6,7 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.3.1] - 2019-04-16
+## [0.4.0] - 2019-04-17
+### Added
+- async_status method
+- AsyncStatus entity
+- AsyncResultWrapper entity
+
+## [0.3.1] - 2019-04-17
 ### Changed
 - comments
 
