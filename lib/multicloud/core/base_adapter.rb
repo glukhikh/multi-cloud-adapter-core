@@ -109,8 +109,9 @@ module Multicloud
       # Returns the uploading request (url, credentionals, etc).
       # @raise [Multicloud::Core::Errors::AccessDenied]
       # @param [String] path - The path to the file.
+      # @param [Boolean] overwrite - The flag of ovewriting of resource.
       # @return [OperationResult<Request>] The uploading request.
-      def upload_file(path)
+      def upload_file(path, overwrite = false)
         raise NotImplementedError
       end
 
