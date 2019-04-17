@@ -98,16 +98,16 @@ module Multicloud
 
       # Returns the uploading request (url, credentionals, etc).
       # @raise [Multicloud::Core::Errors::AccessDenied]
-      # @param [String] path - The path to the directory.
-      # @return [OperationResult<UploadingRequest>] The uploading request.
+      # @param [String] path - The path to the file.
+      # @return [OperationResult<Request>] The uploading request.
       def upload_file(path)
         raise NotImplementedError
       end
 
       # Returns the downloading request (url, credentionals, etc).
       # @raise [Multicloud::Core::Errors::AccessDenied]
-      # @param [String] path - The path to the directory.
-      # @return [OperationResult<DownloadingRequest>] The downloading request.
+      # @param [String] path - The path to the file.
+      # @return [OperationResult<Request>] The downloading request.
       def download_file(path)
         raise NotImplementedError
       end
